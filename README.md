@@ -10,7 +10,7 @@ Objetivos:
 
 
 ## 1ª Etapa
-Criação do Front.
+Criação do Front.  
 Data Finalização: a executar 
 
 ## 2ª Etapa
