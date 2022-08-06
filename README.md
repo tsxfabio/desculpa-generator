@@ -10,8 +10,9 @@ Objetivos:
 
 
 ## 1ª Etapa
-Criação do Front.  
-Data Finalização: a executar 
+Criação do Front.
+Data Início: 06/08/2022
+Data Finalização: em execução 
 
 ## 2ª Etapa
 Integração do Front-end com a API https://excuser.herokuapp.com/  
