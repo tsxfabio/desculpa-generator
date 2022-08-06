@@ -5,7 +5,8 @@ Site gerador de desculpas.
 
 Objetivos:
 - Aperfeiçoar a criação de páginas com HTML, CSS e JavaScript (vanilla).
-- Aperfeiçoar a integração entre front-end e APIs
+- Aperfeiçoar o uso do Bootstrap.
+- Aperfeiçoar a integração entre front-end e APIs.
 - Criação da 1ª API.
 
 
