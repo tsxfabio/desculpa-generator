@@ -10,7 +10,7 @@ Objetivos:
 
 
 ## 1ª Etapa
-Criação do Front.
+Criação do Front.  
 Data Início: 06/08/2022
 Data Finalização: em execução 
 
