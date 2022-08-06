@@ -1,0 +1,12 @@
+* {
+  background-color: #ddd;
+  color: #343a40;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+
+nav {
+  font-size: 18px;
+}
