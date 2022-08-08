@@ -10,3 +10,18 @@
 nav {
   font-size: 18px;
 }
+
+.titulo-principal {
+  padding-left: 5%;
+  text-align: left;
+  justify-content: center;
+}
+
+.titulo-principal h1 {
+  line-height: 1;
+}
+
+.imagem-principal {
+  justify-content: center;
+  text-align: center;
+}
