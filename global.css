@@ -25,6 +25,12 @@ nav {
   text-align: center;
 }
 
+.imagem-principal img {
+  transition: 0.5s;
+  max-height: 450px;
+  width: auto;
+}
+
 .imagem-principal img:hover {
   transition: 0.5s;
   transform: scale(1.02);

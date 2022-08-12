@@ -1,8 +1,7 @@
 var categoria = "";
 
 // Imagem de Apresentação
-document.getElementById("imagemApresentacao").src =
-  "/assets/images/3693790-removebg-preview.png";
+var imagemDestaque = document.getElementById("imagemApresentacao");
 
 // Seletor de Botões
 const btnVariados = document.querySelector("#variados");
@@ -18,11 +17,22 @@ const botoes = [
   btnRelacionamento,
 ];
 
-btnVariados.addEventListener("click", confereCategoria);
-
 for (let botao of botoes) {
   botao.addEventListener("click", confereCategoria);
 }
 function confereCategoria() {
-  console.log("Clicou em " + this.id);
+  categoria = this.id;
+  console.log(categoria);
+  alteraImagemDestaque();
+}
+
+function alteraImagemDestaque() {
+  if (categoria == "") {
+    imagemDestaque.setAttribute("src", "/assets/images/imagem-principal.png");
+  } else {
+    imagemDestaque.setAttribute(
+      "src",
+      "/assets/images/imagem-" + categoria + ".png"
+    );
+  }
 }
