@@ -16,6 +16,7 @@ const botoes = [
   btnAmizade,
   btnRelacionamento,
 ];
+const btnPesquisar = document.querySelector("#submit");
 
 for (let botao of botoes) {
   botao.addEventListener("click", confereCategoria);
@@ -35,4 +36,17 @@ function alteraImagemDestaque() {
       "/assets/images/imagem-" + categoria + ".png"
     );
   }
+}
+
+// Pesquisar
+
+var url = "https://excuser.herokuapp.com/v1/excuse";
+var xhttp = new XMLHttpRequest();
+
+btnPesquisar.addEventListener("click", buscarDesculpa);
+
+function buscarDesculpa() {
+  xhttp.open("GET", url, false);
+  xhttp.send();
+  console.log(xhttp.responseText);
 }
