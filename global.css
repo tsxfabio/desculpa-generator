@@ -35,3 +35,8 @@ nav {
   transition: 0.5s;
   transform: scale(1.02);
 }
+
+#msg-retorno {
+  margin: 50px 0;
+  text-align: center;
+}

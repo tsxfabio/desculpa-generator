@@ -46,7 +46,16 @@ var xhttp = new XMLHttpRequest();
 btnPesquisar.addEventListener("click", buscarDesculpa);
 
 function buscarDesculpa() {
-  xhttp.open("GET", url, false);
+  xhttp.open("GET", url, true);
+  xhttp.onreadystatechange = function () {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      var desculpa = JSON.parse(xhttp.response);
+      var desculpaFormatada = desculpa.map((msg) => msg.excuse);
+      var desculpaFormatada2 = JSON.stringify(desculpaFormatada);
+      console.log(desculpaFormatada2);
+      msgRetorno = document.querySelector("#msg-retorno");
+      msgRetorno.innerHTML = `<p>${desculpaFormatada2}</p>`;
+    }
+  };
   xhttp.send();
-  console.log(xhttp.responseText);
 }
