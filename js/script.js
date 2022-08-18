@@ -49,12 +49,13 @@ function buscarDesculpa() {
   xhttp.open("GET", url, true);
   xhttp.onreadystatechange = function () {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
-      var desculpa = JSON.parse(xhttp.response);
-      var desculpaFormatada = desculpa.map((msg) => msg.excuse);
-      var desculpaFormatada2 = JSON.stringify(desculpaFormatada);
-      console.log(desculpaFormatada2);
-      msgRetorno = document.querySelector("#msg-retorno");
-      msgRetorno.innerHTML = `<p>${desculpaFormatada2}</p>`;
+      var data = JSON.parse(xhttp.response);
+
+      var msgDesculpa = data.map((msg) => msg.excuse);
+      var msgCategoria = data.map((msg) => msg.category);
+
+      var desculpa = document.querySelector("#msg-retorno");
+      desculpa.innerHTML = `<p class="container-msg">Categoria: ${msgCategoria}</p> <p class="container-msg">${msgDesculpa}</p>`;
     }
   };
   xhttp.send();

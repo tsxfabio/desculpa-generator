@@ -38,25 +38,55 @@
             <h5 class="descricao-principal">
               O local com as histórias e desculpas mais divertidas da internet.
             </h5>
-            <p class="descricao-categorias mt-3 mb-0">Escolha uma categoria</p>
-            <button type="button" class="btn btn-primary mt-2" id="variados">
+            <p class="descricao-categorias mt-3 mb-0 d-none">
+              Escolha uma categoria
+            </p>
+            <button
+              type="button"
+              class="btn btn-primary mt-2 d-none"
+              id="variados"
+              disabled
+            >
               Variado
             </button>
-            <button type="button" class="btn btn-primary mt-2" id="trabalho">
+            <button
+              type="button"
+              class="btn btn-primary mt-2 d-none"
+              id="trabalho"
+              disabled
+            >
               Trabalho
             </button>
-            <button type="button" class="btn btn-primary mt-2" id="escola">
+            <button
+              type="button"
+              class="btn btn-primary mt-2 d-none"
+              id="escola"
+              disabled
+            >
               Escola
             </button>
-            <button type="button" class="btn btn-primary mt-2" id="amizade">
+            <button
+              type="button"
+              class="btn btn-primary mt-2 d-none"
+              id="amizade"
+              disabled
+            >
               Amizade
             </button>
             <button
               type="button"
-              class="btn btn-primary mt-2"
+              class="btn btn-primary mt-2 d-none"
               id="relacionamento"
+              disabled
             >
               Relacionamento
+            </button>
+            <button
+              type="submit"
+              class="btn btn-primary col-12 mt-5"
+              id="submit"
+            >
+              Gerar Desculpa
             </button>
           </div>
           <div class="imagem-principal col-7">
@@ -67,14 +97,7 @@
             />
           </div>
         </div>
-        <div class="row mt-4">
-          <button
-            type="submit"
-            class="btn btn-primary col-6 m-auto"
-            id="submit"
-          >
-            Gerar Desculpa
-          </button>
+        <div class="row mt-5">
           <div class="container" id="msg-retorno"></div>
         </div>
       </div>
