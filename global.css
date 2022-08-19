@@ -12,7 +12,7 @@ p {
 }
 
 nav {
-  font-size: 18px;
+  font-size: 13.5pt;
 }
 
 .titulo-principal {
@@ -60,4 +60,30 @@ nav {
 #msg-categoria {
   margin: 0 auto;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  * {
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .imagem-principal img {
+    max-height: 300px;
+  }
+
+  nav,
+  p,
+  h5 {
+    font-size: 12pt;
+  }
+
+  h1 {
+    font-size: 25pt;
+  }
+
+  .container-msg {
+    font-size: 13pt;
+  }
 }
