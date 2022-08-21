@@ -34,7 +34,7 @@ function alteraImagemDestaque() {
   } else {
     imagemDestaque.setAttribute(
       "src",
-      "/assets/images/imagem-" + categoria + ".png"
+      "assets/images/imagem-" + categoria + ".png"
     );
   }
 }
