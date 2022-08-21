@@ -40,7 +40,7 @@ function alteraImagemDestaque() {
 
 // Pesquisar
 
-var url = "https://excuser.herokuapp.com/v1/excuse";
+var url = "https://excuser.herokuapp.com/v1/excuse/";
 var xhttp = new XMLHttpRequest();
 
 btnPesquisar.addEventListener("click", buscarDesculpa);
