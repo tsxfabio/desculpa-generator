@@ -1,14 +1,14 @@
-var categoria = "";
+var categoria;
 
 // Imagem de Apresentação
 var imagemDestaque = document.getElementById("imagemApresentacao");
 
 // Seletor de Botões
-const btnVariados = document.querySelector("#variados");
-const btnTrabalho = document.querySelector("#trabalho");
-const btnEscola = document.querySelector("#escola");
-const btnAmizade = document.querySelector("#amizade");
-const btnRelacionamento = document.querySelector("#relacionamento");
+const btnVariados = document.querySelector("#principal");
+const btnTrabalho = document.querySelector("#office");
+const btnEscola = document.querySelector("#college");
+const btnAmizade = document.querySelector("#party");
+const btnRelacionamento = document.querySelector("#family");
 const botoes = [
   btnVariados,
   btnTrabalho,
@@ -21,6 +21,7 @@ const btnPesquisar = document.querySelector("#submit");
 for (let botao of botoes) {
   botao.addEventListener("click", confereCategoria);
 }
+
 function confereCategoria() {
   categoria = this.id;
   console.log(categoria);
@@ -28,7 +29,7 @@ function confereCategoria() {
 }
 
 function alteraImagemDestaque() {
-  if (categoria == "") {
+  if (categoria == "" || categoria == "principal") {
     imagemDestaque.setAttribute("src", "/assets/images/imagem-principal.png");
   } else {
     imagemDestaque.setAttribute(
@@ -41,12 +42,29 @@ function alteraImagemDestaque() {
 // Pesquisar
 
 var url = "https://excuser.herokuapp.com/v1/excuse/";
+var urlFormatada = "";
 var xhttp = new XMLHttpRequest();
 
-btnPesquisar.addEventListener("click", buscarDesculpa);
+btnPesquisar.addEventListener("click", formatarLink);
+
+function formatarLink() {
+  console.log(categoria);
+  if (
+    categoria !== "" &&
+    categoria !== "principal" &&
+    categoria !== undefined
+  ) {
+    urlFormatada = url + categoria;
+    buscarDesculpa();
+  } else {
+    urlFormatada = url;
+    buscarDesculpa();
+  }
+}
 
 function buscarDesculpa() {
-  xhttp.open("GET", url, true);
+  console.log(urlFormatada);
+  xhttp.open("GET", urlFormatada, true);
   xhttp.onreadystatechange = function () {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
       var data = JSON.parse(xhttp.response);

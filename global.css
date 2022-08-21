@@ -62,13 +62,27 @@ nav {
   text-align: center;
 }
 
+#principal,
+#office,
+#college,
+#party,
+#family {
+  background-color: #343a40;
+  border-color: #343a40;
+}
+
+#submit {
+  background-color: #2a473a;
+  border-color: #2a473a;
+}
+
 @media (max-width: 768px) {
   * {
     text-align: center;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   .imagem-principal img {
     max-height: 300px;
   }
