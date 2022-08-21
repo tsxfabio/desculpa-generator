@@ -30,7 +30,7 @@ function confereCategoria() {
 
 function alteraImagemDestaque() {
   if (categoria == "" || categoria == "principal") {
-    imagemDestaque.setAttribute("src", "/assets/images/imagem-principal.png");
+    imagemDestaque.setAttribute("src", "assets/images/imagem-principal.png");
   } else {
     imagemDestaque.setAttribute(
       "src",
